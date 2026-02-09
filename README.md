@@ -1,1 +1,1 @@
-# mcgill_seat_notification
+#McGill-Seat-Notification
