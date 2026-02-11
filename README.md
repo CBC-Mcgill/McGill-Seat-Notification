@@ -4,7 +4,7 @@
 
 ## 1. Project Overview
 
-**Course Notifier** is a free tool that alerts university students the moment a seat opens in a full course section. The workflow is simple: a student scans a QR code (posted around campus or shared online), lands on a lightweight web page, enters their course code, and subscribes for email notifications. When the system detects availability, the student gets an instant alert so they can register before the seat fills again.
+**Course Notifier** is a free tool that alerts university students the moment a seat opens in a full course section. The workflow is simple: a student scans a QR code (posted around campus or shared online), lands on a lightweight web page, enters their course code, and subscribes for email notifications. When the system detects availability, the student gets an instant alert so they can register before the seat fills again. For paying users, we can have the seat automatically picked for them and notified them in the email.
 
 **The problem it solves:** Students currently resort to obsessively refreshing their university's course catalog, hoping to catch an opening. Course Notifier automates that watch and delivers a notification the moment a spot becomes available — saving hours of manual checking and reducing the chance of missing an opening entirely.
 
