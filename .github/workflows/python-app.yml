@@ -1,0 +1,35 @@
+name: Backend CI
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+permissions:
+  contents: read
+
+jobs:
+  backend:
+    name: Lint & Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install ruff pytest
+          if [ -f pyproject.toml ]; then pip install -e ".[dev]"; fi
+
+      - name: Lint with ruff
+        run: ruff check .
+
+      - name: Test with pytest
+        # Exit code 5 = no tests collected; treat as success until tests are added
+        run: pytest --tb=short || [ $? -eq 5 ]
